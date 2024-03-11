@@ -18,7 +18,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker buildx create --use
         docker buildx inspect
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         docker buildx build \
